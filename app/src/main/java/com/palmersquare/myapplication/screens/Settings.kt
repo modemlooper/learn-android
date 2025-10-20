@@ -12,6 +12,7 @@ import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import com.palmersquare.myapplication.ui.theme.TopBarColors
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -20,10 +21,7 @@ fun Settings() {
         topBar = {
             TopAppBar(
                 title = { Text("Settings") },
-                colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = MaterialTheme.colorScheme.primary,
-                    titleContentColor = MaterialTheme.colorScheme.onPrimary,
-                )
+                colors = TopBarColors.surface(),
             )
         }
     ) { innerPadding ->

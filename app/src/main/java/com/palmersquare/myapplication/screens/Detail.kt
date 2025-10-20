@@ -19,6 +19,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import com.palmersquare.myapplication.ui.theme.TopBarColors
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -35,11 +36,7 @@ fun Detail(
                         Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
                     }
                 },
-                colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = MaterialTheme.colorScheme.primary,
-                    titleContentColor = MaterialTheme.colorScheme.onPrimary,
-                    navigationIconContentColor = MaterialTheme.colorScheme.onPrimary,
-                )
+                colors = TopBarColors.surface(),
             )
         }
     ) { innerPadding ->
